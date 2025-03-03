@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->enum('status', ['pending', 'in_progress', 'completed', 'canceled'])->default('pending');
+            $table->string('status');
             $table->string('address');
             $table->string('city');
             $table->date('date');
