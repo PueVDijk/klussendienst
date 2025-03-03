@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Klusser;
 use Illuminate\Http\Request;
 
 class KlusserController extends Controller
@@ -11,7 +12,8 @@ class KlusserController extends Controller
      */
     public function index()
     {
-        //
+        $klussers = Klusser::all();
+        return view('klussers.index', compact('klussers'));
     }
 
     /**
@@ -19,7 +21,7 @@ class KlusserController extends Controller
      */
     public function create()
     {
-        //
+        return view('klussers.create');
     }
 
     /**
@@ -27,15 +29,17 @@ class KlusserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $klusser = new Klusser();
+        $this->save($klusser, $request);
+        return redirect()->route('klussers.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Klusser $klusser)
     {
-        //
+        return view('klussers.show', compact('klusser'));
     }
 
     /**
