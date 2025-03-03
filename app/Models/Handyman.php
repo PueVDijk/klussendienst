@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Klusser extends Model
+class Handyman extends Model
 {
     //
 }
