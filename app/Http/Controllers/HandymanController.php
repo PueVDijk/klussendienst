@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\HandymanRequest;
+use App\Http\Requests\UserRequest;
 use App\Models\Handyman;
 use Illuminate\Http\Request;
 
@@ -54,7 +54,7 @@ class HandymanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(HandymanRequest $request, Handyman $handyman)
+    public function update(UserRequest $request, Handyman $handyman)
     {
         $this->save($handyman, $request);
         return redirect()->route('handymen.index');
