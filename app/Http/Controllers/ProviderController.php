@@ -19,13 +19,11 @@ class ProviderController extends Controller
         return view('providers.create');
     }
 
-
-    public function store(ProviderRequest $request)
+    public function store(Request $request)
     {
         Provider::create($request->all());
         return redirect('/providers');
     }
-
 
     public function show(string $id)
     {
@@ -39,7 +37,7 @@ class ProviderController extends Controller
 
     }
 
-    public function update(ProviderRequest $request, Provider $provider)
+    public function update(Request $request, Provider $provider)
     {
         $provider->update($request->all());
         return redirect('/providers');
