@@ -2,63 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AssignmentRequest;
+use App\Models\Assignment;
 use Illuminate\Http\Request;
 
 class AssignmentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        //
+        $assignment = Assignment::all();
+        return view('assignments.index', compact('assignments'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('assignments.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+
+    public function store(AssignmentRequest $request)
     {
-        //
+        Assignment::create($request->all());
+        return redirect('/assignments');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
-        //
+        return view('assignments.show', compact('assignment'));
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        return view('assignments.edit', compact('assignment'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(AssignmentRequest $request, Assignment $assignment)
     {
-        //
+        $assignment->update($request->all());
+        return redirect('/assignments');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(Assignment $assignment)
     {
-        //
+        $assignment->delete();
+        return redirect('/assignments');
     }
 }
