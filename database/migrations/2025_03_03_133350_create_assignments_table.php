@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('assignments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->string('street_name');
             $table->string('house_number');
             $table->string('postal_code');
             $table->string('city');
             $table->date('deadline');
             $table->enum('status', ['pending', 'in_progress', 'completed', 'canceled']);
-            $table->integer('budget');
+            $table->decimal('budget', 8, 2);
             $table->foreignId('handyman_id')->constrained();
             $table->timestamps();
         });
