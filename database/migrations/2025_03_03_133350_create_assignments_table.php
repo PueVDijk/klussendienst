@@ -15,14 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->string('status');
-            $table->string('address');
+            $table->string('street_name');
+            $table->string('house_number');
+            $table->string('postal_code');
             $table->string('city');
-            $table->date('date');
-            $table->integer('price');
+            $table->date('deadline');
+            $table->enum('status', ['pending', 'in_progress', 'completed', 'canceled']);
+            $table->integer('budget');
             $table->foreignId('handyman_id')->constrained();
             $table->timestamps();
-
         });
     }
 
