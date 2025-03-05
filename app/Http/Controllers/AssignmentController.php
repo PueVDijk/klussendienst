@@ -25,7 +25,7 @@ class AssignmentController extends Controller
     {
         $assignment = new Assignment();
         $this->save($assignment, $request);
-        return redirect('/assignments');
+        return redirect()->route('assignments.index');
     }
 
 
@@ -50,7 +50,7 @@ class AssignmentController extends Controller
     public function destroy(Assignment $assignment)
     {
         $assignment->delete();
-        return redirect('/assignments');
+        return redirect()->route('assignments.index');
     }
 
     private function save(Assignment $assignment, Request $request)
