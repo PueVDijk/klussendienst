@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('postal_code');
             $table->string('city');
             $table->date('deadline');
-            $table->enum('status', ['pending', 'in_progress', 'completed', 'canceled']);
+            $table->enum('status', ['open', 'pending', 'in_progress', 'completed', 'canceled']);
             $table->decimal('budget', 8, 2);
             $table->foreignId('handyman_id')->constrained();
             $table->timestamps();
