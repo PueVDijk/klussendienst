@@ -11,7 +11,7 @@ class AssignmentController extends Controller
 
     public function index()
     {
-        $assignment = Assignment::all();
+        $assignments = Assignment::all();
         return view('assignments.index', compact('assignments'));
     }
 
@@ -23,7 +23,8 @@ class AssignmentController extends Controller
 
     public function store(AssignmentRequest $request)
     {
-        Assignment::create($request->all());
+        $assignment = new Assignment();
+        $this->save($assignment, $request);
         return redirect('/assignments');
     }
 
@@ -42,13 +43,27 @@ class AssignmentController extends Controller
 
     public function update(AssignmentRequest $request, Assignment $assignment)
     {
-        $assignment->update($request->all());
-        return redirect('/assignments');
+        $this->save($assignment, $request);
+        return redirect()->route('assignments.index');
     }
 
     public function destroy(Assignment $assignment)
     {
         $assignment->delete();
         return redirect('/assignments');
+    }
+
+    private function save(Assignment $assignment, Request $request)
+    {
+        $assignment->name = $request->name;
+        $assignment->description = $request->description;
+        $assignment->street = $request->street;
+        $assignment->house_number = $request->house_number;
+        $assignment->postal_code = $request->postal_code;
+        $assignment->city = $request->city;
+        $assignment->deadline = $request->deadline;
+        $assignment->status = $request->status;
+        $assignment->budget = $request->budget;
+        $assignment->save();
     }
 }

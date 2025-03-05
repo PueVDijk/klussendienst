@@ -24,11 +24,13 @@ class AssignmentRequest extends FormRequest
         return [
             'name' => 'required',
             'description' => 'required',
-            'status' => 'required',
-            'address' => 'required',
+            'street' => 'required',
+            'house_number' => 'required',
+            'postal_code' => 'required',
             'city' => 'required',
-            'date' => 'required',
-            'price' => 'required',
+            'deadline' => 'required',
+            'status' => 'required',
+            'budget' => 'required',
         ];
     }
 }
