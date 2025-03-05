@@ -10,7 +10,7 @@ class ProviderController extends Controller
 {
     public function index()
     {
-        $provider = Provider::all();
+        $providers = Provider::all();
         return view('providers.index', compact('providers'));
     }
 
@@ -21,8 +21,9 @@ class ProviderController extends Controller
 
     public function store(Request $request)
     {
-        Provider::create($request->all());
-        return redirect('/providers');
+        $provider = new Provider();
+        $this->save($provider, $request);
+        return redirect()->route('providers.index');
     }
 
     public function show(string $id)
@@ -39,13 +40,24 @@ class ProviderController extends Controller
 
     public function update(Request $request, Provider $provider)
     {
-        $provider->update($request->all());
-        return redirect('/providers');
+        $this->save($provider, $request);
+        return redirect()->route('providers.index');
     }
 
     public function destroy(Provider $provider)
     {
         $provider->delete();
-        return redirect('/providers');
+        return redirect()->route('providers.index');
+    }
+
+    private function save(Provider $provider, Request $request)
+    {
+        $provider->firstname = $request->firstname;
+        $provider->lastname = $request->lastname;
+        $provider->email = $request->email;
+        $provider->phonenumber = $request->phonenumber;
+        $provider->address = $request->address;
+        $provider->city = $request->city;
+        $provider->save();
     }
 }
