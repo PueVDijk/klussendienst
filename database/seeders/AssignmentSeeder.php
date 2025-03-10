@@ -14,7 +14,7 @@ class AssignmentSeeder extends Seeder
      */
     public function run(): void
     {
-        Assignment::insert([
+        $assignments = [
             [
                 'name' => 'Fix Plumbing Leak',
                 'description' => 'Repair a leaking pipe in the kitchen.',
@@ -43,7 +43,9 @@ class AssignmentSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
-        ]);
+        ];
+        foreach ($assignments as $assignment) {
+            Assignment::create($assignment);
+        }
     }
-    
 }
