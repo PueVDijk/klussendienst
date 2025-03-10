@@ -31,7 +31,41 @@
         }
 
         .gradient-bg {
-            background: linear-gradient(90deg, #1f1993, #2d77ed);
+            background: linear-gradient(90deg, #FFB84D, #FF8C00); /* Soft orange gradient */
+        }
+
+        /* Header styling */
+        .header-bg {
+            background-color: #FF8C00; /* Deep orange */
+        }
+
+        .text-primary {
+            color: #FF8C00; /* Primary orange */
+        }
+
+        /* Button styles */
+        .button-primary {
+            background-color: #FF8C00; /* Deep orange button */
+            color: white;
+        }
+
+        .button-primary:hover {
+            background-color: #FF6F00; /* Darker orange on hover */
+        }
+
+        /* Footer styling */
+        .footer-bg {
+            background-color: #F7F7F7; /* Light grayish background */
+        }
+
+        .footer-text {
+            color: #2E2E2E; /* Dark gray text */
+        }
+
+        /* Link hover effect */
+        .footer-link:hover {
+            color: #FF8C00;
+            transition: color 0.3s ease;
         }
     </style>
 </head>
@@ -39,11 +73,11 @@
 <body class="bg-gray-200">
 
     <header>
-        <div class="gradient-bg">
+        <div class="header-bg">
             <div class="container mx-auto py-4 px-6">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center space-x-2">
-                        <img src="/image/.jpg" alt="Klussendienst Logo" class="h-10 w-auto rounded-full" />
+                        <img src="/image/logo1234.jpg" alt="Klussendienst Logo" class="h-10 w-auto rounded-full" />
                         <span class="text-lg font-bold text-white">Klussendienst</span>
                     </div>
 
@@ -61,15 +95,15 @@
         {{ $slot }}
     </main>
 
-    <footer class="bg-white py-4">
+    <footer class="footer-bg py-4">
         <div class="container mx-auto flex flex-col items-center space-y-4 text-sm text-gray-700">
             <div class="flex space-x-4">
-                <a href="/about" class="hover:text-blue-600 transition duration-200">About Us</a>
-                <a href="/contact" class="hover:text-blue-600 transition duration-200">Contact</a>
-                <a href="/privacy" class="hover:text-blue-600 transition duration-200">Privacy Policy</a>
-                <a href="/terms" class="hover:text-blue-600 transition duration-200">Terms of Service</a>
+                <a href="/about" class="footer-link transition duration-200">About Us</a>
+                <a href="/contact" class="footer-link transition duration-200">Contact</a>
+                <a href="/privacy" class="footer-link transition duration-200">Privacy Policy</a>
+                <a href="/terms" class="footer-link transition duration-200">Terms of Service</a>
             </div>
-            <div class="text-gray-500">
+            <div class="footer-text">
                 <span>&copy; 2025 <span class="font-semibold">Klussendienst</span>. All rights reserved.</span>
             </div>
         </div>
