@@ -31,14 +31,15 @@ class AssignmentController extends Controller
 
     public function show(string $id)
     {
+        $assignment = Assignment::find($id);
         return view('assignments.show', compact('assignment'));
 
     }
 
     public function edit(string $id)
     {
+        $assignment = Assignment::find($id);
         return view('assignments.edit', compact('assignment'));
-
     }
 
     public function update(AssignmentRequest $request, Assignment $assignment)
