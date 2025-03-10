@@ -25,7 +25,7 @@ class AssignmentSeeder extends Seeder
                 'deadline' => Carbon::now()->addDays(7),
                 'status' => 'open',
                 'budget' => 150.00,
-                'handyman_id' => 1,
+                'user_id' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -39,7 +39,7 @@ class AssignmentSeeder extends Seeder
                 'deadline' => Carbon::now()->addDays(14),
                 'status' => 'in_progress',
                 'budget' => 300.00,
-                'handyman_id' => 2,
+                'user_id' => 2,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
