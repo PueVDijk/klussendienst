@@ -22,7 +22,7 @@ return new class extends Migration
             $table->date('deadline');
             $table->enum('status', ['open', 'pending', 'in_progress', 'completed', 'canceled']);
             $table->decimal('budget', 8, 2);
-            $table->foreignId('handyman_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
