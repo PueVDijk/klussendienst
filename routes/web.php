@@ -20,15 +20,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::name("assigments.")->group(function () {
-    Route::prefix("assigments")->group(function () {
+Route::name("assignments.")->group(function () {
+    Route::prefix("assignments")->group(function () {
         Route::get('/', [AssignmentController::class, 'index'])->name('index');
         Route::get('/create', [AssignmentController::class, 'create'])->name('create');
         Route::post('/', [AssignmentController::class, 'store'])->name('store');
-        Route::get('/{assigment}', [AssignmentController::class, 'show'])->name('show');
-        Route::get('/{assigment}/edit', [AssignmentController::class, 'edit'])->name('edit');
-        Route::put('/{assigment}', [AssignmentController::class, 'update'])->name('update');
-        Route::delete('/{assigment}', [AssignmentController::class, 'destroy'])->name('destroy');
+        Route::get('/{assignment}', [AssignmentController::class, 'show'])->name('show');
+        Route::get('/{assignment}/edit', [AssignmentController::class, 'edit'])->name('edit');
+        Route::put('/{assignment}', [AssignmentController::class, 'update'])->name('update');
+        Route::delete('/{assignment}', [AssignmentController::class, 'destroy'])->name('destroy');
     });
 });
 
