@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
                 'firstname' => 'Ferdy',
                 'lastname' => 'van Klink',
                 'email' => 'ferdy@gmail.com',
-                'phonenumber' => '0612345678',
+                'phonenumber' => '0620410676',
                 'street' => 'Kerkstraat',
                 'housenumber' => '1',
                 'postal_code' => '1200AB',
