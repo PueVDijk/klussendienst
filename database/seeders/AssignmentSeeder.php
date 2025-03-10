@@ -37,7 +37,7 @@ class AssignmentSeeder extends Seeder
                 'postal_code' => '54321',
                 'city' => 'Greenville',
                 'deadline' => Carbon::now()->addDays(14),
-                'status' => 'pending',
+                'status' => 'in_progress',
                 'budget' => 300.00,
                 'handyman_id' => 2,
                 'created_at' => now(),
