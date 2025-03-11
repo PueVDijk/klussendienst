@@ -9,5 +9,5 @@ class Assignment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'status', 'address', 'city', 'date', 'price', 'handyman_id'];
+    protected $fillable = ['name', 'description', 'street', 'housenumber', 'postal_code', 'city', 'deadline', 'status', 'budget', 'user_id'];
 }
