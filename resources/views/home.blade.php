@@ -5,7 +5,7 @@
             <p class="text-xl mb-10" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Jouw betrouwbare plek om werk te vinden als klusaanbieder voor thuisprojecten.</p>
             <a href="{{ url('/assignments') }}">
                 <button class="px-3 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-75 transition transform hover:scale-105 border-2 border-transparent hover:border-orange-700">
-                    Ontdek onze diensten
+                    Ontdek onze Klusopdrachten
                 </button>
             </a>
         </div>
