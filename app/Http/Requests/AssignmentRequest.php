@@ -11,7 +11,7 @@ class AssignmentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class AssignmentRequest extends FormRequest
             'name' => 'required',
             'description' => 'required',
             'street' => 'required',
-            'house_number' => 'required',
+            'housenumber' => 'required',
             'postal_code' => 'required',
             'city' => 'required',
             'deadline' => 'required',
