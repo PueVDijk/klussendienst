@@ -30,15 +30,29 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phonenumber' => ['required', 'string', 'max:255'],
+            'street' => ['required', 'string', 'max:255'],
+            'housenumber' => ['required', 'string', 'max:255'],
+            'postal_code' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:255'],
+            'role' => ['required', 'string', 'in:handyman,provider'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
-            'name' => $request->name,
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'phonenumber' => $request->phonenumber,
+            'street' => $request->street,
+            'housenumber' => $request->housenumber,
+            'postal_code' => $request->postal_code,
+            'city' => $request->city,
+            'role' => $request->role,
+            'password' => bcrypt($request->password),
         ]);
 
         event(new Registered($user));
