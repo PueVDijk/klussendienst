@@ -31,14 +31,15 @@ class AssignmentController extends Controller
 
     public function show(string $id)
     {
+        $assignment = Assignment::find($id);
         return view('assignments.show', compact('assignment'));
 
     }
 
     public function edit(string $id)
     {
+        $assignment = Assignment::find($id);
         return view('assignments.edit', compact('assignment'));
-
     }
 
     public function update(AssignmentRequest $request, Assignment $assignment)
@@ -58,12 +59,13 @@ class AssignmentController extends Controller
         $assignment->name = $request->name;
         $assignment->description = $request->description;
         $assignment->street = $request->street;
-        $assignment->house_number = $request->house_number;
+        $assignment->housenumber = $request->housenumber;
         $assignment->postal_code = $request->postal_code;
         $assignment->city = $request->city;
         $assignment->deadline = $request->deadline;
         $assignment->status = $request->status;
         $assignment->budget = $request->budget;
+        $assignment->user_id = $request->user_id ?? 1;
         $assignment->save();
     }
 }
