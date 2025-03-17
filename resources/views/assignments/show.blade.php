@@ -12,7 +12,7 @@
                         <th class="px-6 py-4">Deadline</th>
                         <th class="px-6 py-4">Budget</th>
                         <th class="px-6 py-4">Status</th>
-                        <th class="px-6 py-4">Assigned User</th>
+                        <th class="px-6 py-4">Assigned Handyman</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
@@ -24,7 +24,7 @@
                         <td class="px-6 py-4">{{ $assignment->deadline }}</td>
                         <td class="px-6 py-4">{{ $assignment->budget }}</td>
                         <td class="px-6 py-4">{{ $assignment->status }}</td>
-                        <td class="px-6 py-4">{{ optional($assignment->user)->name ?? 'Unassigned' }}</td>
+                        <td class="px-6 py-4">{{ optional($assignment->handyman)->name ?? 'Unassigned' }}</td>
                     </tr>
                 </tbody>
             </table>
