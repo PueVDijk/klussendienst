@@ -24,7 +24,7 @@
                         <td class="px-6 py-4">{{ $assignment->deadline }}</td>
                         <td class="px-6 py-4">{{ $assignment->budget }}</td>
                         <td class="px-6 py-4">{{ $assignment->status }}</td>
-                        <td class="px-6 py-4">{{ optional($assignment->handyman)->name ?? 'Unassigned' }}</td>
+                        <td class="px-6 py-4">{{ optional($assignment->handyman)->firstname ?? 'Unassigned' }} {{ optional($assignment->handyman)->lastname ?? '' }}</td>
                     </tr>
                 </tbody>
             </table>
