@@ -5,6 +5,7 @@
             <th>Firstname</th>
             <th>Lastname</th>
             <th>Role</th>
+            <th>ID</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
                 <td>{{ $handyman->firstname }}</td>
                 <td>{{ $handyman->lastname }}</td>
                 <td>{{ $handyman->role }}</td>
+                <td>{{ $handyman->id }}</td>
             </tr>
         @endforeach
         @foreach ($providers as $provider)
@@ -20,6 +22,7 @@
                 <td>{{ $provider->firstname }}</td>
                 <td>{{ $provider->lastname }}</td>
                 <td>{{ $provider->role }}</td>
+                <td>{{ $provider->id }}</td>
             </tr>
         @endforeach
     </tbody>
