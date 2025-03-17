@@ -25,7 +25,7 @@ class AssignmentSeeder extends Seeder
                 'deadline' => now()->addDays(14),
                 'status' => 'Open',
                 'budget' => 150.00,
-                'handyman_id' => 1,
+                'handyman_id' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -39,7 +39,7 @@ class AssignmentSeeder extends Seeder
                 'deadline' => now()->addDays(14),
                 'status' => 'In Progress',
                 'budget' => 300.00,
-                'handyman_id' => 2,
+                'handyman_id' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
