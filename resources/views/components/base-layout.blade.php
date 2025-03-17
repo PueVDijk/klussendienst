@@ -83,7 +83,6 @@
 
                     <nav class="flex items-center space-x-1 ml-6">
                         <a href="/home" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Home</a>
-                        <a href="/dashboard" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Dashboard</a>
                         <a href="/assignments" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Assignments</a>
                         <a href="/users" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Users</a>
                     </nav>
@@ -101,6 +100,7 @@
             <div class="flex space-x-4">
                 <a href="/about" class="footer-link transition duration-200">About Us</a>
                 <a href="/contact" class="footer-link transition duration-200">Contact</a>
+                <a href="/dashboard" class="footer-link transition duration-200">Dashboard</a>
                 <a href="/privacy" class="footer-link transition duration-200">Privacy Policy</a>
                 <a href="/terms" class="footer-link transition duration-200">Terms of Service</a>
             </div>
