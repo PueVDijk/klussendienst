@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('housenumber');
             $table->string('postal_code');
             $table->string('city');
-            $table->enum('role', ['admin', 'provider', 'handyman'])->default('handyman');
+            $table->enum('role', ['Admin', 'Provider', 'Handyman'])->default('Handyman');
             $table->rememberToken();
             $table->timestamps();
         });
