@@ -65,7 +65,7 @@ class AssignmentController extends Controller
         $assignment->deadline = $request->deadline;
         $assignment->status = $request->status;
         $assignment->budget = $request->budget;
-        $assignment->user_id = $request->user_id ?? 1;
+        $assignment->handyman_id = $request->user->id ?? 1;
         $assignment->save();
     }
 }
