@@ -9,9 +9,10 @@ class UserController extends Controller
 {
     public function index()
     {
+        $users = User::all();
         $handymen = User::where('role', 'handyman')->get();
         $providers = User::where('role', 'provider')->get();
-        return view('users.index', compact('handymen', 'providers'));
+        return view('users.index', compact('users', 'handymen', 'providers'));
     }
 
     public function create()
