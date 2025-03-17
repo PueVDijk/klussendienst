@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 'housenumber' => '1',
                 'postal_code' => '1200AB',
                 'city' => 'Amsterdam',
-                'password' => bcrypt('password'),
+                'password' => bcrypt('Ferdy3110'),
                 'role' => 'admin',
             ],
             [
@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
                 'housenumber' => '2',
                 'postal_code' => '1201AB',
                 'city' => 'Amsterdam',
-                'password' => bcrypt('password'),
+                'password' => bcrypt('Pieter2511'),
                 'role' => 'admin',
             ],
             [
@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
                 'housenumber' => '3',
                 'postal_code' => '1202AB',
                 'city' => 'Amsterdam',
-                'password' => bcrypt('password'),
+                'password' => bcrypt('SilvioBR'),
                 'role' => 'admin',
             ],
             [
@@ -59,7 +59,7 @@ class UserSeeder extends Seeder
                 'housenumber' => '4',
                 'postal_code' => '1203AB',
                 'city' => 'Amsterdam',
-                'password' => bcrypt('password'),
+                'password' => bcrypt('AhmedAGI'),
                 'role' => 'admin',
             ],
             [
