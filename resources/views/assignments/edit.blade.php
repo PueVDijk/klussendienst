@@ -56,19 +56,19 @@
 
                 <div class="mb-4">
                     <label for="deadline" class="block text-gray-900 dark:text-gray-100 font-semibold mb-2">Deadline:</label>
-                    <input type="date" id="deadline" name="deadline" value="{{ old('deadline', $assignment->deadline->format('Y-m-d')) }}" required
-                        class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                    <input type="date" id="deadline" name="deadline" value="{{ $assignment->deadline }}" required
+                    class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                 </div>
 
                 <div class="mb-4">
                     <label for="status" class="block text-gray-900 dark:text-gray-100 font-semibold mb-2">Status:</label>
                     <select id="status" name="status" required
                         class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
-                        <option value="open" {{ old('status', $assignment->status) == 'open' ? 'selected' : '' }}>Open</option>
-                        <option value="pending" {{ old('status', $assignment->status) == 'pending' ? 'selected' : '' }}>Pending</option>
-                        <option value="in_progress" {{ old('status', $assignment->status) == 'in_progress' ? 'selected' : '' }}>In Progress</option>
-                        <option value="completed" {{ old('status', $assignment->status) == 'completed' ? 'selected' : '' }}>Completed</option>
-                        <option value="canceled" {{ old('status', $assignment->status) == 'canceled' ? 'selected' : '' }}>Canceled</option>
+                        <option value="Open" {{ old('status', $assignment->status) == 'open' ? 'selected' : '' }}>Open</option>
+                        <option value="Pending" {{ old('status', $assignment->status) == 'pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="In_progress" {{ old('status', $assignment->status) == 'in_progress' ? 'selected' : '' }}>In Progress</option>
+                        <option value="Completed" {{ old('status', $assignment->status) == 'completed' ? 'selected' : '' }}>Completed</option>
+                        <option value="Canceled" {{ old('status', $assignment->status) == 'canceled' ? 'selected' : '' }}>Canceled</option>
                     </select>
                 </div>
 
