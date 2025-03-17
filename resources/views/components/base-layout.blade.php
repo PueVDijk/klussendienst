@@ -83,9 +83,10 @@
 
                     <nav class="flex items-center space-x-1 ml-6">
                         <a href="/home" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Home</a>
-                        <a href="/register" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Register</a>
                         <a href="/assignments" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Assignments</a>
                         <a href="/users" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Users</a>
+                        <a href="/register" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Register</a>
+
                     </nav>
                 </div>
             </div>
