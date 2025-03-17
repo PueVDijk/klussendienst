@@ -83,6 +83,7 @@
 
                     <nav class="flex items-center space-x-1 ml-6">
                         <a href="/home" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Home</a>
+                        <a href="/dashboard" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Dashboard</a>
                         <a href="/assignments" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Assignments</a>
                         <a href="/users" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Users</a>
                     </nav>
