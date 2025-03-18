@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\ProfileController;
@@ -19,7 +21,8 @@ Route::get('/dashboard', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/privacy', [PrivacyController::class, 'index'])->name('privacy');
 Route::get('/terms', [TermsOfServiceController::class, 'index'])->name('terms');
-
+Route::get('/about', [AboutUsController::class, 'index'])->name('about');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
