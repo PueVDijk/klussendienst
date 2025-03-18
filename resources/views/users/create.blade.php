@@ -77,7 +77,6 @@
                         class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                         <option value="handyman">Handyman</option>
                         <option value="provider">Provider</option>
-                        <option value="admin">Admin</option>
                     </select>
                 </div>
 
