@@ -88,6 +88,7 @@
                         @guest
                             <a href="/register" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Register</a>
                         @endguest
+                        <div class="nav-link px-4 py-2 text-white font-medium rounded-lg underline">{{ Auth::user()->firstname }}</div>
 
                     </nav>
                 </div>
