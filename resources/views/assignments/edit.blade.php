@@ -78,18 +78,18 @@
                         step="0.01" min="0" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                 </div>
 
-                {{-- <!-- Handyman ID Field -->
+                <!-- Handyman ID Field -->
                 <div class="mb-4">
                     <label for="handyman_id" class="block text-gray-900 dark:text-gray-100 font-semibold mb-2">Handyman:</label>
                     <select id="handyman_id" name="handyman_id" required
                         class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                         @foreach ($handymen as $handyman)
                             <option value="{{ $handyman->id }}" {{ old('handyman_id', $assignment->handyman_id) == $handyman->id ? 'selected' : '' }}>
-                                {{ $handyman->name }}
+                                {{ $handyman->firstname }} {{ $handyman->lastname }}
                             </option>
                         @endforeach
                     </select>
-                </div> --}}
+                </div>
 
                 <button type="submit"
                     class="w-full py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">

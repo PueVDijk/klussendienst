@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AssignmentRequest;
 use App\Models\Assignment;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AssignmentController extends Controller
@@ -39,7 +40,8 @@ class AssignmentController extends Controller
     public function edit(string $id)
     {
         $assignment = Assignment::find($id);
-        return view('assignments.edit', compact('assignment'));
+        $handymen = User::where('role', 'handyman')->get();
+        return view('assignments.edit', compact('assignment', 'handymen'));
     }
 
     public function update(AssignmentRequest $request, Assignment $assignment)
