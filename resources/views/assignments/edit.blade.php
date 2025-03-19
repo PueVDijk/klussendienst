@@ -1,7 +1,7 @@
 <x-base-layout>
     <div class="container mx-auto p-8">
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
-            <h1 class="text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">Edit Assignment</h1>
+            <h1 class="text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">Edit Assignment: {{ $assignment->name }}</h1>
 
             <!-- Display Errors if Any -->
             @if ($errors->any())
@@ -56,7 +56,7 @@
 
                 <div class="mb-4">
                     <label for="deadline" class="block text-gray-900 dark:text-gray-100 font-semibold mb-2">Deadline:</label>
-                    <input type="date" id="deadline" name="deadline" value="{{ $assignment->deadline }}" required
+                    <input type="date" id="deadline" name="deadline" value="{{ old('deadline', $assignment->deadline) }}" required
                     class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                 </div>
 
