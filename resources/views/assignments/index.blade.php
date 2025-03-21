@@ -6,7 +6,7 @@
                 <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 transition-transform duration-200 ease-in-out hover:shadow-xl">
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white">{{ $assignment->name }}</h2>
                     <p class="text-gray-700 dark:text-gray-300 mt-1">{{ $assignment->description }}</p>
-                    <p class="text-gray-700 dark:text-gray-300 mt-4"><strong>Location:</strong> {{ $assignment->street }} {{ $assignment->house_number }}, {{ $assignment->city }}</p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4"><strong>Location:</strong> {{ $assignment->street }} {{ $assignment->housenumber }}, {{ $assignment->city }}</p>
                     <p class="text-gray-700 dark:text-gray-300 mt-1"><strong>Status:</strong> {{ $assignment->status }}</p>
                     
                     <div class="mt-4 flex justify-center space-x-4">                         <a href="{{ route('assignments.show', $assignment->id) }}" class="inline-block px-6 py-2 text-sm font-medium text-blue-600 bg-blue-100 rounded-full dark:bg-blue-600 dark:text-white hover:bg-blue-200 dark:hover:bg-blue-500">View</a>

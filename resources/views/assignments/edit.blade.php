@@ -1,7 +1,7 @@
 <x-base-layout>
     <div class="container mx-auto p-8">
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
-            <h1 class="text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">Edit Assignment</h1>
+            <h1 class="text-2xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">Edit Assignment: {{ $assignment->name }}</h1>
 
             <!-- Display Errors if Any -->
             @if ($errors->any())
@@ -56,7 +56,7 @@
 
                 <div class="mb-4">
                     <label for="deadline" class="block text-gray-900 dark:text-gray-100 font-semibold mb-2">Deadline:</label>
-                    <input type="date" id="deadline" name="deadline" value="{{ $assignment->deadline }}" required
+                    <input type="date" id="deadline" name="deadline" value="{{ old('deadline', $assignment->deadline) }}" required
                     class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                 </div>
 
@@ -78,18 +78,18 @@
                         step="0.01" min="0" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                 </div>
 
-                {{-- <!-- Handyman ID Field -->
+                <!-- Handyman ID Field -->
                 <div class="mb-4">
                     <label for="handyman_id" class="block text-gray-900 dark:text-gray-100 font-semibold mb-2">Handyman:</label>
                     <select id="handyman_id" name="handyman_id" required
                         class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
                         @foreach ($handymen as $handyman)
                             <option value="{{ $handyman->id }}" {{ old('handyman_id', $assignment->handyman_id) == $handyman->id ? 'selected' : '' }}>
-                                {{ $handyman->name }}
+                                {{ $handyman->firstname }} {{ $handyman->lastname }}
                             </option>
                         @endforeach
                     </select>
-                </div> --}}
+                </div>
 
                 <button type="submit"
                     class="w-full py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">

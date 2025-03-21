@@ -85,8 +85,13 @@
                         <a href="/home" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Home</a>
                         <a href="/assignments" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Assignments</a>
                         <a href="/users" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Users</a>
-                        <a href="/register" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Register</a>
-
+                        @guest
+                            <a href="/register" class="nav-link px-4 py-2 text-white font-medium rounded-lg">Register</a>
+                        @endguest
+                        
+                        @auth
+                            <div class="nav-link px-4 py-2 text-white font-medium rounded-lg underline">{{ Auth::user()->firstname }}</div>
+                        @endauth
                     </nav>
                 </div>
             </div>
