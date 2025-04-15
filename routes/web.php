@@ -10,7 +10,7 @@ use App\Http\Controllers\TermsOfServiceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -18,7 +18,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/privacy', [PrivacyController::class, 'index'])->name('privacy');
 Route::get('/terms', [TermsOfServiceController::class, 'index'])->name('terms');
 Route::get('/about', [AboutUsController::class, 'index'])->name('about');
