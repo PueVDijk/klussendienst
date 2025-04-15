@@ -72,11 +72,9 @@
     
                 <nav class="hidden md:flex items-center ml-4">
                     <ul class="flex justify-center space-x-3 text-sm">
-                        <li><a href="/" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Home</a></li>
-                        <li><a href="/assignments" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Assignments</a></li>
-                        <li><a href="/users" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Users</a></li>
-                        <li><a href="/about" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">About</a></li>
-                        <li><a href="/contact" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Contact</a></li>
+                        <li><a href="/" class="nav-link px-2 py-1 text-gray-300 font-medium hover:text-orange-500">Home</a></li>
+                        <li><a href="/assignments" class="nav-link px-2 py-1 text-gray-300 font-medium hover:text-orange-500">Assignments</a></li>
+                        <li><a href="/users" class="nav-link px-2 py-1 text-gray-300 font-medium hover:text-orange-500">Users</a></li>
                     </ul>
                 </nav>
     
@@ -110,7 +108,7 @@
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <img src="/image/Logo.png" alt="Klussendienst Logo" class="h-10 w-auto rounded-full border border-orange-500" />
-                        <span class="text-xl font-bold">Klussendienst</span>
+                        <span class="text-xl font-bold text-orange-500">Klussendienst</span>
                     </div>
                     <p class="text-gray-400 text-sm mb-4">Connecting skilled professionals with clients for reliable home services.</p>
                     <div class="flex space-x-4">
