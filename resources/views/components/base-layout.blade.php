@@ -59,38 +59,38 @@
 
 <body class="font-sans antialiased bg-gray-100 text-gray-900">
     <!-- Header -->
-    <header class="bg-white shadow-soft sticky top-0 z-50">
+    <header class="bg-gray-900 shadow-soft sticky top-0 z-50">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-3">
-                    <img src="/image/logo1234.jpg" alt="Klussendienst Logo" class="h-12 w-auto rounded-full border-2 border-orange-600 p-1" />
+                    <img src="/image/Logo.png" alt="Klussendienst Logo" class="h-12 w-auto rounded-full border-2 border-orange-600 p-1" />
                     <div>
-                        <span class="text-xl font-bold text-orange-700">Klussendienst</span>
-                        <p class="text-xs text-gray-500 -mt-1">Reliable Home Services</p>
+                        <span class="text-xl font-bold text-orange-500">Klussendienst</span>
+                        <p class="text-xs text-gray-400 -mt-1">Reliable Home Services</p>
                     </div>
                 </div>
-
+    
                 <nav class="hidden md:flex items-center ml-4">
                     <ul class="flex justify-center space-x-3 text-sm">
-                        <li><a href="/" class="nav-link px-2 py-1 text-gray-700 font-medium hover:text-orange-600">Home</a></li>
-                        <li><a href="/assignments" class="nav-link px-2 py-1 text-gray-700 font-medium hover:text-orange-600">Assignments</a></li>
-                        <li><a href="/users" class="nav-link px-2 py-1 text-gray-700 font-medium hover:text-orange-600">Users</a></li>
-                        <li><a href="/about" class="nav-link px-2 py-1 text-gray-700 font-medium hover:text-orange-600">About</a></li>
-                        <li><a href="/contact" class="nav-link px-2 py-1 text-gray-700 font-medium hover:text-orange-600">Contact</a></li>
+                        <li><a href="/" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Home</a></li>
+                        <li><a href="/assignments" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Assignments</a></li>
+                        <li><a href="/users" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Users</a></li>
+                        <li><a href="/about" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">About</a></li>
+                        <li><a href="/contact" class="nav-link px-2 py-1 text-gray-400 font-medium hover:text-orange-500">Contact</a></li>
                     </ul>
                 </nav>
-
+    
                 <div class="flex items-center space-x-4">
                     @auth
                         <form action="{{ route('logout') }}" method="POST" class="inline">
                             @csrf
-                            <button type="submit" class="text-sm font-medium text-orange-600 hover:text-orange-700">Sign Out</button>
+                            <button type="submit" class="text-sm font-medium text-orange-500 hover:text-orange-600">Sign Out</button>
                         </form>
                     @else
-                        <a href="/login" class="text-sm font-medium text-orange-600 hover:text-orange-700">Sign In</a>
+                        <a href="/login" class="text-sm font-medium text-orange-500 hover:text-orange-600">Sign In</a>
                         <a href="/register" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200 shadow-md hover:shadow-lg">Join Now</a>
                     @endauth
-                    <button class="md:hidden text-gray-600 focus:outline-none">
+                    <button class="md:hidden text-gray-400 focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -109,7 +109,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="/image/logo1234.jpg" alt="Klussendienst Logo" class="h-10 w-auto rounded-full border border-orange-500" />
+                        <img src="/image/Logo.png" alt="Klussendienst Logo" class="h-10 w-auto rounded-full border border-orange-500" />
                         <span class="text-xl font-bold">Klussendienst</span>
                     </div>
                     <p class="text-gray-400 text-sm mb-4">Connecting skilled professionals with clients for reliable home services.</p>
@@ -117,7 +117,7 @@
                         <a href="https://www.facebook.com/Klussendienst" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.twitter.com/Klussendienst" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/Klussendienst" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/Klussendienst" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -127,6 +127,7 @@
                         <li><a href="/about" class="footer-link text-gray-400 hover:text-white">About Us</a></li>
                         <li><a href="/assignments" class="footer-link text-gray-400 hover:text-white">Assignments</a></li>
                         <li><a href="/contact" class="footer-link text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="/users" class="footer-link text-gray-400 hover:text-white">Werkers</a></li>
                     </ul>
                 </div>
                 
