@@ -8,14 +8,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware([
-    //         'auth',
-    //         'admin',
-    //     ]);
-    // }
-
     public function index()
     {
         $users = User::all();
@@ -38,26 +30,26 @@ class UserController extends Controller
 
     public function show(string $id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         return view('users.show', compact('user'));
     }
 
     public function edit(string $id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         return view('users.edit', compact('user'));
     }
 
     public function update(UserRequest $request, string $id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $this->saveUser($user, $request);
         return redirect()->route('users.index');
     }
 
     public function destroy(string $id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $user->delete();
         return redirect()->route('users.index');
     }
